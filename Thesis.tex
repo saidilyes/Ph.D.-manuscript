@@ -1,0 +1,272 @@
+\input{preamble/static}
+\input{preamble/general}
+\input{preamble/fonts}
+\input{preamble/etc}
+
+
+%used packages 
+\usepackage{pdflscape}
+
+ \usepackage{titlesec}
+
+
+% \titleformat{\paragraph}
+% {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+% \titlespacing*{\paragraph}
+% {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+%\setcounter{secnumdepth}{5}
+
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+% Define block styles
+\tikzstyle{decision} = [diamond, draw, fill=white!20, 
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=white!20, 
+    text width=10em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=white!20, node distance=3cm,
+    minimum height=2em]
+\usetikzlibrary{backgrounds,fit}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{svg}
+
+%% package alg 
+\usepackage{fancyhdr,graphicx,amsmath,amssymb}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+
+
+
+%% numbreing paragraphs 
+
+\newcommand*\numcircledmod[1]{\raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {#1}}}}
+
+% mini TOC 
+\usepackage{minitoc}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{paralist}
+\bibliographystyle{plain}
+\usepackage{blindtext}
+\usepackage{amssymb}
+%\usepackage{minitoc}
+\usepackage{makeidx}
+%\title{\textbf{Teoria degli insiemi:\\variabili e domini di quantificazione}}
+%\author{\textit{Bla Bla}\\Università Bla bla \vspace*{-0.25cm}\\ Cdl in bla\vspace*{-0.25cm}\\bla bla}
+
+\usepackage{etoc}
+\etocsettocstyle{}{}%
+
+\usepackage{empheq}
+
+
+\usepackage{listofitems,environ}
+\usepackage{geometry}
+%\usepackage[dvipsnames]{xcolor}
+% \usepackage{hyperref}
+
+% % \definecolor{mycolor}{HTML}{F7F8E0}
+% % \definecolor{myorange}{RGB}{245,156,74}
+
+% \hypersetup{
+%   colorlinks=true,
+%   urlcolor=blue
+% }
+
+\usepackage{epigraph} 
+
+
+\begin{document}
+\clearforchapter
+
+\frontmatter
+
+%\prefrontmatter
+
+\newgeometry{%
+    paper = a4paper,%
+    top = 40pt,%
+    hmargin = 58pt,%
+    bottom = 40pt,%         <---- Changing this has no effect
+    headsep = 50pt,%
+}
+
+
+\include{prefrontmatter/Title_page}
+\restoregeometry
+%\cleartoevenpage
+\cleardoublepage
+
+%\include{prefrontmatter/colophon}
+\clearforchapter
+
+\frontmatter
+
+\newgeometry{%
+    paper = a4paper,%
+    top = 5pt,%
+    hmargin = 58pt,%
+    bottom = 60pt,%         <---- Changing this has no effect
+    headsep = 50pt,%
+}
+
+
+\include{frontmatter/Summary}
+\restoregeometry
+\clearforchapter
+
+\frontmatter
+\newgeometry{%
+    paper = a4paper,%
+    top = -10pt,%
+    hmargin = 58pt,%
+    bottom = 40pt,%         <---- Changing this has no effect
+    headsep = 50pt,%
+}
+\include{frontmatter/FrenchSummary}
+\restoregeometry
+
+
+
+%\include{frontmatter/Preface}
+\include{frontmatter/Quot}
+\include{frontmatter/Second_quot}
+
+
+\include{frontmatter/Acknowledgements}
+\cleardoublepage
+\thispagestyle{empty}
+
+%% TOC 
+ \clearforchapter
+ \phantomsection % This is added to make hyperref point to the right "Contents" page
+
+ 
+ % \addcontentsline{toc}{part}{Contents} % Adds "Contents" as part-style in ToC
+ %   \pagestyle{myruled} %Restores the heading style as before "appruled". Remove if "appruled" is commented
+
+\include{frontmatter/Contents}
+
+
+
+%% List of figures + tables 
+\include{frontmatter/ListeOfFigures}
+\include{frontmatter/ListeOfTables}
+
+%% List of publication 
+\newgeometry{%
+    paper = a4paper,%
+    top = 60pt,%
+    hmargin = 58pt,%
+    bottom = 60pt,%         <---- Changing this has no effect
+    headsep = 50pt,%
+}
+\include{frontmatter/Publications}
+\restoregeometry
+
+
+\clearforchapter
+\mainmatter
+
+
+%% Acrtonyms 
+%\include{frontmatter/Acronyms}
+
+
+
+
+
+
+
+
+
+
+
+
+
+% CORE of the manuscript 
+  \include{chapters/Introduction}
+  
+  % PART 1
+  \part{State of the art}
+  \include{chapters/Chapitre_2/Chapter_2}
+  \include{chapters/Chapitre_3/Chapitre_3}
+
+  % PART 2
+  \part{Cooperative Multi-Controller Architecture}
+  \include{chapters/Chapitre_4/Chapitre_4}
+  \include{chapters/Chapitre_5/Chapter_5}
+  \include{chapters/Chapitre_6/Chapter_6}
+
+  % General conclusion
+ \include{chapters/Conclusion}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%% The appendix 
+\appendixpage\appendix
+\pagestyle{appruled} % Comment to remove the word "Appendix" from the header
+\include{appendices/RSU}
+\include{appendices/equation}
+\include{appendices/Appendixe_3}
+
+
+
+%% The bibiography 
+ \backmatter
+ \pagestyle{myruled} %Restores the heading style as before "appruled". Remove if "appruled" is commented
+ \bibliography{bibliography/Bibliography.bib}
+ \bibliographystyle{ieeetr}
+
+
+\include{frontmatter/Quot_end}
+
+
+
+
+%% The abstract + translation 
+\newgeometry{%
+    paper = a4paper,%
+    top = 40pt,%
+    hmargin = 58pt,%
+    bottom = 40pt,%         <---- Changing this has no effect
+    headsep = 50pt,%
+}
+\include{frontmatter/Final_abstract}
+\restoregeometry
+
+
+
+\end{document}
+
+
+ 
+

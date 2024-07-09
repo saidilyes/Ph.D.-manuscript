@@ -1,0 +1,194 @@
+%!TEX root = ../Thesis.tex
+\chapter*{General conclusion and future works}
+\addcontentsline{toc}{part}{General conclusion and future works} % Adds "Conclusion" as part-style in ToC
+\markboth{Conclusion}{General conclusion and future works}    % Marks left and right headers as "Introduction"
+
+\section*{General conclusion}
+The research work presented in this PhD manuscript delves into the challenging yet auspicious domain of Multi-Vehicle System (MVS) in the context of autonomous transportation. The overarching aim of the study has been to address the challenges associated with MVS coordination in complex and dynamic scenarios, particularly focusing on on-ramp merging and navigation in formation on highway. 
+
+The investigation into the context highlighted both the benefits and challenges posed by the widespread use of transportation systems. Notably, human errors have been identified as the main cause of accidents, motivating the exploration of autonomous vehicles (AVs) technology as a promising solution. The focus shifted towards MVS, in fact, the identified challenging scenarios require a motion coordination ability that the AVs do not explicitly include part of their abilities. This AVs limitation sets the stage for the presentation of the MVS paradigm, emphasizing the recognition of their potential to enhance safety, passenger comfort, and energy efficiency in various scenarios. 
+
+
+The conceptual idea behind this PhD work is to take advantage of the MVS cooperative ability to tackle the challenging scenario of on-ramp merging on highway. In other terms, the formation control concept part of the MVS paradigm was used to synchronize the vehicles' motion during the merging, while satisfying both of the individual vehicles' objectives and the MVS overarching goal. Consequently, threefold objectives were identified: (1) Formalizing the problem of MVS on-ramp merging on dense highway, (2) Developing navigation strategies for MVS in formation suited for the tackled scenario, and (3) Design a cooperative and altruistic decision-making level that promotes the MVS advantages. These objectives collectively led to the design of the proposed Cooperative Multi-Controller Architecture (C-MCA). 
+
+
+The C-MCA, originally inspired from the foundational multi-controller architecture, focuses on both of the decision-making and the planning levels to mitigate the challenges related to MVS on-ramp merging. The decision-making level is based on the proposed multi-behavior decision-making strategy. This strategy comprises a nominal behavior, crafted for executing the merging maneuver while ensuring the vehicle's individual goal. The latter is activated when the generated vehicle dynamics satisfy the safety requirement. Otherwise, the C-MCA takes the responsibility of solving the merging conflict. To this aim, the altruistic passing sequence selection strategy is proposed, designed to satisfy both of the individual vehicles' goals and the MVS overarching goal, it decides on the MVS vehicles' passing sequence in the merging zone. This decision is motivated through the prism of safety, passengers' comfort, and energy efficiency. 
+
+
+Under the planning level, both of the C-MCA main behaviors have their assigned controller, designed to meet their specifications. For instance, the cooperative behavior controller's goal is to translate the passing sequence to the MVS vehicles' dynamics. The translation is based on the dynamic formation reconfiguration approach. The first proposed reconfiguration approach, named Constrained Optimal Reconfiguration Matrix (CORM), rooted on the virtual structure approach for formation modeling, and the proposed constrained inter-target distance matrix for formation control, which has several limitations, mainly in highly dynamic and structure environment. These limitations were the motivation of the second formation reconfiguration approach, named Extended Constrained Optimal Reconfiguration Matrix (E-CORM). The E-CORM mitigates the CORM's limited flexibility with the help of the proposed trajectory segmentation strategy, but still depends on a time-consuming optimization algorithm that does not align with the objectives of this work. Consequently, the third proposed approach, Formation Reconfiguration Approach based on Online Control Strategy (FRA-OCS), took advantages from both of the CORM and E-CORM to online control the formation reconfiguration according to the selected passing sequence. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% The outlined main objectives highlight the need for addressing challenges in coordinating the motions of multiple vehicles in complex scenarios, formulating safe and energy-efficient formation control strategies, and developing decision-making frameworks that seamlessly integrate safety, passenger comfort, and energy efficiency criteria.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% The subsequent sections delved into each objective, providing a detailed exploration of the challenges, methodologies, and proposed solutions. Noteworthy aspects included the formal modeling of MVS formation, distributed solutions, promoting cooperation, performance demonstration, robustness, and uncertainty assessment. These elements collectively formed a multifaceted control architecture, paving the way for the proposed Cooperative Multi-Controller Architecture (C-MCA) for safe and energy-efficient on-ramp merging on highways.
+
+% The C-MCA was further dissected, showcasing its design, main modules, and interactions. The multi-behavior decision-making strategy within the C-MCA was explored in-depth, encompassing nominal and cooperative behaviors. Simulation scenarios were employed to evaluate the performance of the proposed strategy in achieving the overarching goals of safety, traffic flow, passenger comfort, and energy efficiency.
+
+% Additionally, the research presented and evaluated three distinct frameworks for cooperative formation reconfiguration, namely the Constrained Optimal Reconfiguration Matrix (CORM), Extended CORM (E-CORM), and Formation Reconfiguration Approach based on Online Control Strategy (FRA-OCS). Each framework exhibited strengths and limitations, ultimately leading to the selection of the FRA-OCS as the most suitable solution aligned with the C-MCA objectives.
+
+% In conclusion, the research presented a holistic and systematic approach to address the challenges of MVS coordination in dynamic and complex on-road environments. The proposed methodologies, architectures, and decision-making strategies demonstrated a comprehensive understanding of the complexities involved in achieving safe, efficient, and cooperative MVS operations. The outcomes of this PhD thesis contribute valuable insights to the evolving field of autonomous transportation and pave the way for further advancements in MVS coordination and navigation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{Perspectives and future works}
+
+
+
+
+
+
+The diverse contributions presented in this PhD manuscript could lead to the introduction of a novel approach for understanding MVS navigation in intricate scenarios requiring motion synchronization, notably in situations such as on-ramp merging on highways. Consequently, the developments made in this PhD work are expected to facilitate the exploration and expansion of several research areas within the realms of MVS navigation in complex scenarios, formation control, and multi-criteria decision-making. The subsequent section provides a concise overview of the key research endeavors we intend to undertake in the near future. 
+
+
+
+
+
+
+\subsubsection*{Extend the cooperative multi-controller architecture to meet the robustness requirement}
+
+
+Our primary focus was on addressing the challenge of MVS safely navigating on-ramp merging on highways. To tackle this, we developed the C-MCA, drawing inspiration from the AV control architecture and the foundational multi-controller architecture. Our objective was to emphasize decision-making and planning levels to effectively handle the specific scenario. Enhancing the robustness of the C-MCA emerged as a crucial aspect in our effort to improve its genericity, with two key factors demanding attention: uncertainty and communication-related issues. 
+
+
+Robustness entails constructing a control architecture capable of handling multiple sources of uncertainty, whether preexisting or introduced during processing. Uncertainty may arise from various origins, such as local or distant sources of uncertainty, regarding for instance sensor observations in the AV or uncertainty in the environmental scenario communicated by peer vehicles. These uncertainties persist not only when addressing individual vehicles but also when dealing with a group of vehicles represented by the MVS. Consequently, accounting for uncertainty becomes imperative in the decision-making process. Establishing a decision-making layer capable of, (i) estimating the current safety state considering uncertainty, (ii) assessing the risk of future situations and propagating uncertainty, and (iii) conducting risk assessment and management to devise a fail-safe strategy when both nominal and cooperative behaviors fall short of ensuring the safety requirement. 
+
+
+
+Furthermore, the robustness of the control architecture is closely linked to its dependency to communication. Communication introduces challenges such as delays in sending and receiving information, packet losses, and potential cyber attacks. To mitigate these communication-related issues, a prudent approach involves minimizing the control architecture's reliance on communication. When constructing a control architecture that utilizes communication, efforts should be made to minimize it to the bare minimum, employing tools like architecture distribution and predictions of the vehicle behavior using approaches such as game theory. 
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Improve the metrics part of the multi-criteria decision-making level}
+To determine an optimal passing sequence for the MVS within the merging zone, the decision-making level employs a multi-criteria objective function. This function's assessment relies on three sub-criteria: safety, evaluated using the Euclidean distance; passenger comfort, assessed through acceleration changes; and energy efficiency, estimated by considering both acceleration and kinetic energy. 
+
+In the context of enhancing the C-MCA efficiency, an avenue worth exploring involves refining the metrics used to evaluate the multi-criteria objective function. Specifically, for safety evaluation, adopting the Extended Time-To-Collision (E-TTC) \cite{dimiathesis} metric can be beneficial. E-TTC provides comprehensive information on safety between two vehicles by incorporating not only the relative Euclidean distance but also information about relative velocity. 
+
+
+Regarding energy estimation, an enhanced energy consumption estimator based on the Electrical Vehicle (EV) model was developed  \footnote{The improved energy consumption estimator was developed by L. Midelet, L. Saidi, L. Adouane and R. Talj}. This estimator leverages a detailed low-level modeling of the EV to generate an estimation of the state of charge variable during normalized velocity cycles (e.g., NEDC, WLTP). Unfortunately, due to time constraints, the results of this improved estimator could not be incorporated into the findings if this PhD manuscript. 
+
+
+
+\subsection*{Extend the contributions to other scene representations}
+
+The following potential use-cases have been identified for investigation to validate the versatility of the proposed C-MCA:  
+
+\begin{itemize}
+    \item Multi-lane CACC: the proposed C-MCA was successfully used in order to perform platoon navigation. One extension of this application is by tackling multi-lane formation navigation (multi-lane CACC). 
+
+    \item Intersection crossing: in addition to on-ramp merging, intersections are also considered as challenging scenarios in the literature. In fact, intersections and on-ramp merging have many similarities such as overlapping trajectories and bottlenecks caused by idling vehicles. Thus, motion coordination through the passing sequence selection can be considered to overcome the intersection crossing challenges. 
+\end{itemize}
+
+
+
+
+
+
+
+
+\subsection*{Simulation and experimentation}
+
+
+
+
+The majority of the proposed methodologies have been substantiated primarily through extensive simulation work. Consequently, there is a compelling need to transition the proposed Formation Reconfiguration Approach base on an Online Control Strategy and the multi-behavior decision-making from simulated environments to practical implementations on multiple real-world vehicles or within a large-scale simulation grounded in real-world traffic data. This transition presents a host of technical challenges, including ensuring the reliable implementation of software components and addressing the functional safety concerns inherent to automobile operating systems.
+
+Moreover, uncertainties surround these hierarchical layers, each comprising diverse components for collaborative functionality. Executing scenarios resembling on-ramp situations, even without the high dynamics' characteristic of highway scenarios, necessitate either a controlled test environment equipped with an on-ramp or the legal authorization to use public on-ramps. For a more pragmatic approach, research could be conducted using small-scale vehicles within a confined highway environment. As highlighted in the state-of-the-art (Chapter \ref{chap:chapter2}), real-world experiments involving MVS technology particularly and AV globally remain a persisting challenge.

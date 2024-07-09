@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="188.58379mm"
+   height="90.192368mm"
+   viewBox="0 0 188.58379 90.192368"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="AV_Architecture.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="1.3291001"
+     inkscape:cx="495.44802"
+     inkscape:cy="256.18839"
+     inkscape:window-width="2303"
+     inkscape:window-height="1321"
+     inkscape:window-x="2489"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid6966"
+       originx="-3.3046363"
+       originy="-10.468185" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect8847"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect8819"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect7632"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <marker
+       style="overflow:visible"
+       id="marker7495"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow5"
+       markerWidth="5.8874264"
+       markerHeight="6.6094756"
+       viewBox="0 0 5.8874262 6.6094758"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="m 6,0 c -3,1 -7,3 -9,5 0,0 0,-4 2,-5 -2,-1 -2,-5 -2,-5 2,2 6,4 9,5 z"
+         id="path7493" />
+    </marker>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect7154"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <marker
+       style="overflow:visible"
+       id="marker7495-3"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow5"
+       markerWidth="5.8874264"
+       markerHeight="6.6094756"
+       viewBox="0 0 5.8874262 6.6094758"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="m 6,0 c -3,1 -7,3 -9,5 0,0 0,-4 2,-5 -2,-1 -2,-5 -2,-5 2,2 6,4 9,5 z"
+         id="path7493-6" />
+    </marker>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect7154-2"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-4"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-4" />
+    </marker>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect7632-2"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-4-7"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-4-2" />
+    </marker>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect7632-2-3"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-4-6"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-4-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-4-7-7"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-4-2-0" />
+    </marker>
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect8847-7"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-3.3046363,-10.468185)">
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="6.4003463"
+       y="19.230156"
+       id="text2242"><tspan
+         sodipodi:role="line"
+         id="tspan2240"
+         style="font-size:3.175px;stroke-width:0.264583"
+         x="6.4003463"
+         y="19.230156">Prior environment knowledge </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="9.836935"
+       y="53.990761"
+       id="text2242-51"><tspan
+         sodipodi:role="line"
+         id="tspan2240-98"
+         style="font-size:3.175px;stroke-width:0.264583"
+         x="9.836935"
+         y="53.990761">Prior driving knowledge</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="115.6769"
+       y="39.261318"
+       id="text2242-3"><tspan
+         sodipodi:role="line"
+         id="tspan2240-9"
+         style="font-size:3.175px;stroke-width:0.264583"
+         x="115.6769"
+         y="39.261318">Environment information</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="115.41048"
+       y="72.936127"
+       id="text2242-3-5"><tspan
+         sodipodi:role="line"
+         id="tspan2240-9-5"
+         style="font-size:3.175px;stroke-width:0.264583"
+         x="115.41048"
+         y="72.936127">Driving path</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="73.627708"
+       y="17.510199"
+       id="text2242-6"><tspan
+         sodipodi:role="line"
+         id="tspan2240-8"
+         style="font-size:3.175px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="73.627708"
+         y="17.510199">Environment </tspan><tspan
+         sodipodi:role="line"
+         style="font-size:3.175px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="73.627708"
+         y="21.478949"
+         id="tspan2429">perception </tspan><tspan
+         sodipodi:role="line"
+         style="font-size:3.175px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="74.185814"
+         y="25.447699"
+         id="tspan2431">system </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="164.9427"
+       y="50.70697"
+       id="text2242-6-5"><tspan
+         sodipodi:role="line"
+         style="font-size:3.175px;stroke-width:0.264583"
+         x="164.9427"
+         y="50.70697"
+         id="tspan2431-0">Monitor</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:3.175px;stroke-width:0.264583"
+         x="164.9427"
+         y="54.67572"
+         id="tspan2814">system </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="96.478119"
+       y="15.508006"
+       id="text2242-4"><tspan
+         sodipodi:role="line"
+         id="tspan2240-1"
+         style="font-size:3.175px;stroke-width:0.264583"
+         x="96.478119"
+         y="15.508006">- Traffic signs recognition</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="156.42105"
+       y="67.410973"
+       id="text2242-4-1"><tspan
+         sodipodi:role="line"
+         id="tspan2240-1-7"
+         style="font-size:3.175px;stroke-width:0.264583"
+         x="156.42105"
+         y="67.410973">- Action monitor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="96.254448"
+       y="86.506287"
+       id="text2242-4-5-4"><tspan
+         sodipodi:role="line"
+         id="tspan2240-1-5-2"
+         style="font-size:3.175px;stroke-width:0.264583"
+         x="96.254448"
+         y="86.506287">- Steering wheel</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="96.188217"
+       y="19.906704"
+       id="text2242-5"><tspan
+         sodipodi:role="line"
+         id="tspan2240-6"
+         style="font-size:3.175px;stroke-width:0.264583"
+         x="96.188217"
+         y="19.906704">- Lane recognition</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="79.913139"
+       y="94.228287"
+       id="text2469"><tspan
+         sodipodi:role="line"
+         id="tspan2467"
+         style="stroke-width:0.264583"
+         x="79.913139"
+         y="94.228287" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="96.307587"
+       y="24.277496"
+       id="text2242-1"><tspan
+         sodipodi:role="line"
+         id="tspan2240-4"
+         style="font-size:3.175px;stroke-width:0.264583"
+         x="96.307587"
+         y="24.277496">- Scene perception</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="96.299835"
+       y="29.02346"
+       id="text2242-7"><tspan
+         sodipodi:role="line"
+         id="tspan2240-66"
+         style="font-size:3.175px;stroke-width:0.264583"
+         x="96.299835"
+         y="29.02346">- Obstacle detection</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="65.014656"
+       y="87.222458"
+       id="text2242-3-7"><tspan
+         sodipodi:role="line"
+         id="tspan2240-9-56"
+         style="font-size:3.175px;stroke-width:0.264583"
+         x="65.014656"
+         y="87.222458">Control</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:3.175px;stroke-width:0.264583"
+         x="65.014656"
+         y="91.191208"
+         id="tspan2680">executive</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:3.175px;stroke-width:0.264583"
+         x="65.014656"
+         y="95.159958"
+         id="tspan2682">system</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="96.257545"
+       y="90.897301"
+       id="text2242-4-5-3"><tspan
+         sodipodi:role="line"
+         id="tspan2240-1-5-0"
+         style="font-size:3.175px;stroke-width:0.264583"
+         x="96.257545"
+         y="90.897301">- Gas pedal</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="96.138176"
+       y="95.592018"
+       id="text2242-4-5-2"><tspan
+         sodipodi:role="line"
+         id="tspan2240-1-5-5"
+         style="font-size:3.175px;stroke-width:0.264583"
+         x="96.138176"
+         y="95.592018">- Brake</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="156.42105"
+       y="75.92942"
+       id="text2242-4-5-2-3"><tspan
+         sodipodi:role="line"
+         id="tspan2240-1-5-5-3"
+         style="font-size:3.175px;stroke-width:0.264583"
+         x="156.42105"
+         y="75.92942">- Process monitor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="156.42105"
+       y="84.188194"
+       id="text2242-4-5-2-3-6"><tspan
+         sodipodi:role="line"
+         id="tspan2240-1-5-5-3-2"
+         style="font-size:3.175px;stroke-width:0.264583"
+         x="156.42105"
+         y="84.188194">- Problem manager</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:square;stroke-linejoin:round;stroke-opacity:0.85098;paint-order:markers fill stroke"
+       id="rect6962"
+       width="79.528275"
+       height="21.10137"
+       x="58.128304"
+       y="10.550685" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:square;stroke-linejoin:round;stroke-opacity:0.85098;paint-order:markers fill stroke"
+       id="rect6964"
+       width="43.59623"
+       height="18.712536"
+       x="92.66687"
+       y="11.745103" />
+    <g
+       id="g7966"
+       transform="translate(0,-13.229169)">
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+         x="62.944481"
+         y="66.561859"
+         id="text2242-6-3"><tspan
+           sodipodi:role="line"
+           style="font-size:3.175px;stroke-width:0.264583"
+           x="62.944481"
+           y="66.561859"
+           id="tspan2431-4">Autonomous</tspan><tspan
+           sodipodi:role="line"
+           style="font-size:3.175px;stroke-width:0.264583"
+           x="62.944481"
+           y="70.530609"
+           id="tspan2573">decision system</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+         x="96.19622"
+         y="65.497292"
+         id="text2242-4-5"><tspan
+           sodipodi:role="line"
+           id="tspan2240-1-5"
+           style="font-size:3.175px;stroke-width:0.264583"
+           x="96.19622"
+           y="65.497292">- Behavior decision</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+         x="96.21637"
+         y="73.975327"
+         id="text2242-4-3"><tspan
+           sodipodi:role="line"
+           id="tspan2240-1-0"
+           style="font-size:3.175px;stroke-width:0.264583"
+           x="96.21637"
+           y="73.975327">- Local path planning</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:3.175px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+         x="96.338844"
+         y="69.584381"
+         id="text2242-4-0"><tspan
+           sodipodi:role="line"
+           id="tspan2240-1-57"
+           style="font-size:3.175px;stroke-width:0.264583"
+           x="96.338844"
+           y="69.584381">- Global path planning</tspan></text>
+      <g
+         id="g6997"
+         transform="translate(-2.1166667)">
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:square;stroke-linejoin:round;stroke-opacity:0.85098;paint-order:markers fill stroke"
+           id="rect6962-4"
+           width="79.528275"
+           height="21.10137"
+           x="60.36784"
+           y="58.128304" />
+        <rect
+           style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:square;stroke-linejoin:round;stroke-opacity:0.85098;paint-order:markers fill stroke"
+           id="rect6964-8"
+           width="43.59623"
+           height="18.712536"
+           x="94.906403"
+           y="59.322723" />
+      </g>
+    </g>
+    <g
+       id="g6997-6"
+       transform="matrix(0.99999655,0,0,1,-2.786766,21.269846)"
+       style="stroke-width:1">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:square;stroke-linejoin:round;stroke-opacity:0.85098;paint-order:markers fill stroke"
+         id="rect6962-4-2"
+         width="79.528275"
+         height="21.10137"
+         x="60.36784"
+         y="58.128304" />
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:square;stroke-linejoin:round;stroke-opacity:0.85098;paint-order:markers fill stroke"
+         id="rect6964-8-1"
+         width="43.59623"
+         height="18.712536"
+         x="94.906403"
+         y="59.322723" />
+    </g>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:square;stroke-linejoin:round;stroke-opacity:0.85098;paint-order:markers fill stroke"
+       id="rect7085"
+       width="42.369789"
+       height="55.53117"
+       x="149.43613"
+       y="45.046879" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:square;stroke-linejoin:round;stroke-opacity:0.85098;paint-order:markers fill stroke"
+       id="rect7087"
+       width="35.613144"
+       height="38.217266"
+       x="152.81183"
+       y="58.278641" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.05833, 0.264583;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker7495)"
+       d="M 3.3053326,20.832986 C 21.135628,20.739142 38.965662,20.6453 56.79543,20.551459"
+       id="path7152"
+       inkscape:path-effect="#path-effect7154"
+       inkscape:original-d="M 3.3053326,20.832986 C 21.135629,20.739406 38.965663,20.645566 56.79543,20.551459" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.05833, 0.264583;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker7495-3)"
+       d="M 3.4054102,55.494707 C 21.235706,55.400863 39.06574,55.307021 56.895508,55.21318"
+       id="path7152-0"
+       inkscape:path-effect="#path-effect7154-2"
+       inkscape:original-d="M 3.4054102,55.494707 C 21.235707,55.401127 39.065741,55.307287 56.895508,55.21318" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleStart-4)"
+       d="m 113.80461,65.902761 c 0,4.059696 0,8.119268 0,12.178712"
+       id="path7630-2"
+       inkscape:path-effect="#path-effect7632-2"
+       inkscape:original-d="m 113.80461,65.902761 c 1.2e-4,4.059696 1.2e-4,8.119268 0,12.178712" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#TriangleStart-4-7)"
+       d="m 114.2634,31.585145 c 0,4.059696 0,8.119268 0,12.178712"
+       id="path7630-2-8"
+       inkscape:path-effect="#path-effect7632-2-3"
+       inkscape:original-d="m 114.2634,31.585145 c 1.2e-4,4.059696 1.2e-4,8.119268 0,12.178712" />
+    <circle
+       id="path8813"
+       style="fill:#000000;stroke:#000000;stroke-width:0.264583"
+       cx="138.5112"
+       cy="57.009182"
+       r="0.011692634" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleStart-4);marker-end:url(#TriangleStart-4-7)"
+       d="m 138.81598,56.938801 c 3.18709,-0.02346 6.37395,-0.04692 9.5606,-0.07038"
+       id="path8845"
+       inkscape:path-effect="#path-effect8847"
+       inkscape:original-d="m 138.81598,56.938801 c 3.18709,-0.0232 6.37395,-0.04665 9.5606,-0.07038" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#TriangleStart-4-6);marker-end:url(#TriangleStart-4-7-7)"
+       d="m 138.23848,91.493613 c 3.33749,-0.02346 6.67475,-0.04692 10.01178,-0.07038"
+       id="path8845-5"
+       inkscape:path-effect="#path-effect8847-7"
+       inkscape:original-d="m 138.23848,91.493613 c 3.33749,-0.0232 6.67475,-0.04665 10.01178,-0.07038" />
+  </g>
+</svg>

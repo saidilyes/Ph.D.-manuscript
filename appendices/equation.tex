@@ -1,0 +1,49 @@
+\appendix 
+\thispagestyle{empty}
+
+\hypertarget{AppendixB}{}\section*{Appendix B: Safety insurance strategy part of the inter-target distance matrix} 
+The inter-target error $e_{f_{23}}$ is defined as given in \cite{8430659}: 
+
+\begin{align} \label{eq:systeme_of_example}
+    e_{f_{23}}&= f_2-f_3 \nonumber \\
+    &=-f_2^{end} + f_2 + f_3^{end} - f_3 + f_2^{end} - f_3^{end} \nonumber \\
+    &=-e_{f_2} + e_{f_3} + e_{f_{23}}^{end}
+\end{align}
+
+The inter-target distance can be expressed by: 
+\begin{equation}\label{eq:derivative_inter_target}
+    d_T^2 = e_{f_{23}}^Te_{f_{23}}
+\end{equation}
+
+eq. \ref{eq:derivative_inter_target} is derivated in order to obtain the minimum inter-target distance: 
+\begin{align} \label{eq:distance_derivative}
+    \frac{d(d_T^2)}{dt}&= 0 
+\end{align}
+
+eq. \ref{eq:derivative_inter_target} is replaced in eq. \ref{eq:distance_derivative}:
+\begin{equation} \label{eq:nul_distane_derivative}
+    2e_{f_{23}}^T\dot{e}_{f_{23}}=0
+\end{equation}
+
+eq. \ref{eq:nul_distane_derivative} can be written using the derivative of eq. \ref{eq:systeme_of_example} and eq. \ref{eq:linearSystem} as follows: 
+
+\begin{align} \label{eq:system_A_remplacement}
+    e_{f_{23}}^T\dot{e}_{f_{23}}&=0 \nonumber \\
+    e_{f_{23}}^T[\dot{e}_{f_2} - \dot{e}_{f_3}]&=0 \nonumber \\
+    e_{f_{23}}^T[(a_2+a_{23}){e}_{f_2} - (a_3 - a_{23}){e}_{f_3}]&=0
+\end{align}
+
+Using eq. \ref{eq:systeme_of_example} in eq. \ref{eq:system_A_remplacement}, it is obtained: 
+
+\begin{align} \label{eq:final_condi_distance_CORM_2}
+    e_{f_{23}}^T[(a_2+a_{23}){e}_{f_2} - (a_3 - a_{23})(e_{f_2} + {e}_{f_{23}} - {e}_{f_{23}}^{end})]&=0 \nonumber \\
+  e_{f_{23}}^T[(a_2-a_3 +a_{23}){e}_{f_2} + (a_{23}-a_3){e}_{f_{23}} - (a_{23}-a_3){e}_{f_{23}}^{end}]&=0
+\end{align}
+
+Using  eq. \ref{eq:distance_derivative} and eq. \ref{eq:final_condi_distance_CORM_2}, the condition linking the minimum inter-target distance $\underline{D}_{T}$ and gains of the reconfiguration matrix $A$ can be formulated by: 
+
+\begin{equation}\label{eq:FinalDistaneStudy}
+    e_{f_{23}}^T \Big[\frac{a_2-a_3+a_{23}}{a_3-a_{23}}{e}_{f_2} + {e}_{f_{23}}^{end} \Big] \geq \underline{D}_{T} ^2 
+\end{equation}
+
+Thus, the values of $a_2$, $a_3$, and $a_{23}$ must be chosen to satisfy eq. \ref{eq:FinalDistaneStudy}.

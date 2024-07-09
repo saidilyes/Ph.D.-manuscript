@@ -1,0 +1,587 @@
+\chapter{From individual Automated Vehicles to Multi-Vehicle System}
+\label{chap:chapter1}
+
+
+
+
+
+
+
+\begin{abstract}
+This chapter is dedicated to expounding the evolution of the Multi-Vehicle System (MVS). The central emphasis is on cooperative technologies tailored for a fleet of Autonomous Vehicles (AVs), navigating in complex and dynamic on-road environment. The chapter commences with a brief overview of AV technologies, providing a foundation for the MVS discussion. It then delves into the MVS paradigm. 
+    
+\end{abstract}
+
+
+\textbf{Contents}
+\vspace{0.15cm}
+\hline
+\hspace{2cm}
+\localtableofcontents
+\hspace{2cm}
+\hline
+
+
+
+
+
+
+
+
+
+
+
+\section{Introduction}
+%\todo{ajouter une introduction sur les autonomous and unmanned systems, parler des différents types des unmanned systems et c'est uniquement après qu'on parle des UGVs}
+
+
+
+With the development of the transportation system in general and the automobile industry in particular, more and more vehicles are on the roads. It is estimated that currently there are about $1.47$ billion operational vehicles worldwide, including $1.06$ billion passenger vehicles and $363$ billion commercial vehicles \cite{NumberCars}\cite{ACEA}. The number is expected to reach $2$ billion vehicles by $2035$ \cite{GHI}. As a result, a series of critical issues are becoming more serious in modern transportation systems, such as road safety, road traffic congestion, energy waste, and pollution \cite{7056505}. According to a study conducted by the US National Highway Traffic Safety Administration, it was found that human error accounts for anywhere between $94\%$ and $96\%$ of all accidents \cite{NHTSA}. On-road safety is a cornerstone in the development of the transportation system. Taking these alarming statistics into account, the automotive industry has itself a mission to reduce the accidents number and this by addressing the human errors. 
+
+
+One effective approach to significantly reduce human errors is the automation of high-risk driving tasks. Before delving into the solutions used to mitigate human errors in on-road environments, it is valuable to establish a broad framework for unmanned based technologies. In general, autonomous and Unmanned Vehicle Systems \cite{adouane2016autonomous} are categorized according to their operating domain with the most representative being: 
+Autonomous Underwater Vehicles, Unmanned Surface Vehicles, Unmanned Maritime Vehicles, Unmanned (or Uninhabited) Aerial Vehicles, and Unmanned Ground Vehicles (UGVs). Moreover, UGVs may move using various devices (e.g., legs, wheels). In particular, the problem and primary works in this PhD manuscript are interpreted mainly in terms of Autonomous vehicles within the multi-vehicle system, the latter are considered as UGVs with wheels. 
+
+
+
+
+
+
+\section{Autonomous vehicles' technology: overall context}
+
+ Indeed, one of the most important issues of UGVs research is autonomous vehicles (also known as  self-driving car, driver-less car or robotic cars) for public/private transit. 
+ 
+ Beside the improvement of the driving safety by reducing the participation of the human error consequences. Autonomous Vehicles (AVs) have the advantage of relieving the drivers from the duty of driving and paying attention, thus making it possible to exploit travel time in other activities. AVs reduce notably the number of circulating vehicles (e.g., ride-sharing applications), and thanks to route optimizations, will reduce road congestion, improve traffic flow and reduce traffic pollution \cite{mariani2021coordination}. 
+ 
+% \textcolor{blue}{also cite the reference from the paper according to the commented section} \textcolor{red}{il faut ajouter des références en conséquence pour justifier ce que je dis et prouver les différents avantages}
+
+\begin{figure}[!b]
+        \centering 
+        \includegraphics[width=10cm,height=18cm,keepaspectratio]{chapters/Chapitre_2/Figures/SAE_LEVEL.png}
+       % \vspace{-2.3mm}
+        \caption{SAE autonomy levels \cite{sae2018taxonomy}}
+        \label{fig:SAE_Levels}
+        \end{figure} 
+
+ 
+ The society of Automotive Engineers (SAE) created the \textit{J3016202104}\cite{sae2018taxonomy}, which is a standard of six levels grading for the driving automation (cf. Figure \ref{fig:SAE_Levels}), Ranking from no driving automation (level 0) to full driving automation (level 5). Level 3 categorizes conditional driving automation, as for level 4, it defines high driving automation. These two levels require a human driver in a supervisory capacity who is prepared to retake control in certain situations. 
+ 
+ \begin{figure}[!h]
+        \centering 
+        \includegraphics[width=12cm,height=18cm,keepaspectratio]{chapters/Chapitre_2/Figures/SAE_ODD.png}
+      %  \vspace{-2.3mm}
+        \caption{SAE autonomy levels ODD's \cite{2018SURFACEVR}}
+        \label{fig:SAE_ODD}
+                \vspace{-5mm}
+        \end{figure}
+
+
+ 
+ Additionally, each level 3 and level 4 vehicle will have its own Operational Design Domain (ODD) (cf. Figure \ref{fig:SAE_ODD}) \cite{sae2018taxonomy}\cite{2018SURFACEVR}. Consequently, autonomous vehicles are favored to travel freely inside some limited locations, such as vast parking lots, and to execute rural or urban logistics areas. 
+
+
+
+
+
+
+
+
+ 
+
+
+%\textcolor{red}{ajouter le diagram de cette reference: The Self-Driving Car:
+%Crossroads at the Bleeding Edge of Artificial
+%Intelligence and Law}
+
+ % \includegraphics[width=8cm,height=18cm,keepaspectratio]{AV_StateOfArt_Diagram-4.pdf}
+ % \caption{Figure legend: AVs developments\cite{ mclachlan2022selfdriving}}
+
+\subsection{Overview of the autonomous vehicles' developments} \label{sec:AV_state_of_the_art}
+A brief overview of AVs' development during the last two decades is given in Figure \ref{fig:State_of_the_art}. This section is dedicated to draw an overview of the main past / current and coming experimental developments related to the AVs' technology. Additionally, it presents the main simulation tools used to test and validate the AVs' developements. 
+
+ 
+\subsubsection{Main past / current and coming experimental developments}
+ In order to spur technology for the development of AVs, the Defense Advanced Research Projects Agency (DARPA) organized three competitions in the last two decades. The first, named DARPA Grand Challenge, was realized at the Mojave Desert, USA, in 2004, and required self-driving cars to navigate a 142 miles (228.53 km) long course throughout desert trails within a 10 h time limit. All competing cars failed within the first few miles \cite{BADUE2021113816}. 
+
+The DARPA Grand Challenge was repeated in 2005 and required self-driving cars to navigate a 132 miles (212.43 km) long route through flats, dry lake beds, and mountain passes, including three narrow tunnels, and more than 100 sharp left and right turns. This competition had 23 finalists and 4 cars completed the route within the allowed time limit. The Stanford University's car, Stanley \cite{Thrun2007}, claimed first place, and the Carnegie Mellon University's cars, Sandstorm and H1ghlander, finished in second and third places, respectively. 
+
+The third competition known as the DARPA Urban Challenge \cite{10.5555/1822544}, was held at the former George Air Force Base, California, USA, in 2007. It required self-driving cars to navigate a 60 miles (96.56 km) long route throughout a simulated urban environment, together with other self-driving and human driven cars, within a 6h time limit. The cars had to obey California traffic rules. This edition had 11 finalists and 6 cars completed the route within the allocatted time limit. The Carnegie Mellon University's car, Boss \cite{BOSS}, claimed first place, the Stanford University's car, Junior \cite{Junior}, finished in second, and the Virginia Tech's car, Odin \cite{Odin}, came in third place. Even though these competitions presented challenges much simpler than those typically seen in everyday traffic, they have being hailed as milestones for the development of self-driving cars.
+
+Since the DARPA challenges, many self-driving car competitions and trials have been performed. Relevant examples include: The European Land - Robot Trial (ELROB) \cite{ELROB}, the Intelligent Vehicle Future Challenge \cite{wang2021china}, the AutoDrive Challenge \cite{AutoDrive} and many more. At the same time, research on self-driving cars has accelerated in both academia and industry around the world. Notable examples of universities conducting research on self-driving cars comprise Stanford University (Stanley, winner of DARPA 2005), Carnegie Mellon University (Boss, winner of the DARPA 2007). On the other hand, technology companies and scientific research institutions have massively invested in the field. For example, Google, an internet company, which is one of the leaders in self-driving cars, based on its solid foundation in artificial intelligence. So far, Google vehicles have accumulated more than 3.2 million km of tests, becoming the closest to the actual use \cite{Waymo1}. Alphabet's Waymo recently unveiled an SAE level 4 self-driving taxi service in Arizona. However, a certain number of situations are still to improve, where the waymo cars still need to manage \cite{waymo2}. 
+
+Another company that has made great progress in the field of self-driving cars is Tesla. Tesla was the first to claim the industrialization of the self-driving car technology. Tesla's auto-pilot technology has made major breakthroughs in recent years. Although the Tesla's auto-pilot technology is only regarded as SAE level 2 by the national highway traffic safety administration (NHTSA) \cite{waymo2}. 
+
+In addition to the companies mentioned above, lots of Internet companies and car companies worldwide are also focusing on the self-driving field recently. For example, the Canadian automotive supplier Magna has developed the MAX 4 technology to enable SAE level 4 capabilities in both urban and highway environments.   
+
+
+In Sweden, Volvo and Autoliv established a joint company-Zenuity, which is committed to the security of self-driving cars \cite{Coelingh2018DrivingTF}. In South Korea, Samsung received approval from the South Korean government to test its driver-less cars on public roads. In China, Baidu deep learning institute led the research project of self-driving cars in 2013. In 2014, Baidu established the automotive networking business division and successively launched CarLife, My-Car and CoDriver \cite{Toschi}.  Recently, Baidu and Volvo, announced a strategic partnership to jointly develop SAE level 4 electric vehicles that will serve the robotaxi market in china \cite{Synopsys}.
+
+
+
+\subsubsection{Simulation tools}
+\label{sec:SCANeR-studio}
+Rigorous and comprehensive testing plays a key role in training self-driving cars to handle a variety of situations, where they are expected to see on public roads. The physical testing on public roads is unsafe, costly, and not always reproducible. With the craze around the self-driving technology, many simulators were developed to simplify and accelerate the training of self-driving cars \cite{kaur2021survey}. For example MATLAB/Simulink self-driving vehicle team developed a toolbox that provides algorithms and tools for  designing, simulating, and testing ADAS and autonomous driving systems \cite{Matlab}. The capability of co-simulation with other softwares like CarSim \cite{CarSim} makes it easier to build various vehicle models. The user personalizes the vehicle model according to its preferences in CarSim and rely on MATLAB/Simulink to control the generated model using co-simulation. MATLAB/Simulink can also be used in co-simulation with SUMO \cite{Sumo} to create scenarios that deal with traffic flow. Sofwars like SCANeR Studio can be used in co-simulation with MATLAB/Simulink in order to build a more established vehicle's model and complex scenarios \cite{SCANeR}. 
+
+
+Further, Gazebo \cite{Gazebo} is a popular robotic simulator, and it  is known for its high flexibility and its seamless integration with ROS \cite{ROS}. It does include various sensors models and it allows users to create new sensors models. The creation of the simulation is manual, where the user creates a 3D models and carefully defines their physics. Simulators relying on 3D engine such as CARLA provide a high-quality simulation environments that require GPU computing unit in order to run with reasonable performance and frame rate. The user can invoke different facilities in CARLA \cite{Carla} via a flexible API. According to the survey in \cite{kaur2021survey}, the authors advice CARLA for end-to-end functionalities testing that self-driving car offer such as perception, mapping, localization, and vehicle control. 
+
+\begin{figure}[]
+        \centering 
+        \includegraphics[width=22cm,height=18cm,keepaspectratio]{chapters/Chapitre_2/Figures/State_of_Art.png}
+        \vspace{-2.3mm}
+    \caption{A brief review of the Autonomous Vehicles state developments in the last two decades, adapted from \cite{zhu2022hierarchical}}
+        \label{fig:State_of_the_art}
+                \vspace{-5mm}
+        \end{figure} \newpage
+
+
+%\textcolor{red}{ajouter cette reference ici: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9499331}
+
+%In this section, the essential characteristics of intelligent mobile robots and the transition process to build a multi-vehicle system will be discussed. In addition, different scenarios where cooperation between the vehicles is utilized are exposed. 
+
+
+
+%\textcolor{red}{this part is to motivate the choice of MVS by the exposition of the AVs limitation}
+
+
+%\textcolor{red}{je crois qu'il vaut mieux commencer par un cadre global avec toutes les branches des UVS et se spécialisé par la suite dans les UGV et ensuite passer dans les avantages des UGVs pour basculer par la suite dans leur limitations et c'est ça qui introduit justement les MVS}
+
+
+
+
+
+%  Besides the advantage of relieving us from the duty of driving and paying attention,
+%  thus making it possible to exploit travel time in other activities, autonomous vehicles will bring further important benefits. They will reduce crashes, now mostly due to bad human behaviours and human errors, most likely saving millions of injuries and lives [17]. They will notably reduce the number of circulating vehicles and, also thanks to route optimisations, will definitely reduce traffic and pollution [69]. Last but not least, they will pave the way for a number of innovative solutions in the provisioning of mobility services [85], to serve our needs with much greater levels of quality and efficiency than today.
+
+%Indeed, one of the most important areas of UGVs research is intelligent vehicles (also known as self-driving cars, autonomous vehicles driver-less car or robotic cars) for public/private transit. The deployment of a fully (SAE level 5) or semi-autonomous system (SAE level 3 or 4) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Autonomous vehicle's architecture}\label{sec:MVS-paradigm}
+
+
+
+The overall technical framework of self-driving cars shown in Figure \ref{fig:AV_Architecture} that are equipped with SAE level 3 or higher autonomy system can be divided into four parts, namely the driving environment perception system, the autonomous decision system, the control execution system and the monitoring system \cite{ni2020survey}.
+
+\begin{figure}[!h]
+        \centering 
+        \includegraphics[width=11cm,height=18cm,keepaspectratio]{chapters/Chapitre_2/Figures/AV_Architecture.png}
+        %\vspace{-2.3mm}
+        \caption{AV's architecture \cite{ni2020survey}}
+        \label{fig:AV_Architecture}
+        \end{figure}
+
+
+The environment \textbf{perception} system utilizes the prior knowledge of the environment to establish an environmental model including obstacles, road structures, and traffic signs through obtaining surrounding environmental information. The main function of the environment perception system is to realize functions like lane detection, traffic signal detection, and obstacles detection, by using some hardware devices such as cameras, LiDARs and radars.  
+
+The main function of the autonomous \textbf{decision} system is to make some decisions for the self-driving car, including obstacle avoidance, path planning, navigation, and so on. For example, in the path planning, the autonomous decision system plans a global path according to the current localization and the target location firstly, then reasonably plans a local path for the self-driving car by combining the global path and the local environment information provided by the environment perception system.   
+
+The \textbf{control} execution system's function is to generate the commands needed to meet the objectives given by the decision system, such as braking, steering, and accelerating to guarantee the speed control and path-following control. 
+
+The \textbf{monitor} system is responsible to check whether the car is making actual progress towards its goal and reacts with recovery actions when meeting problems like unexpected obstacles and  faults.
+
+\subsection{Multi-Vehicle System} \label{sec: MVS_control_Architecture}
+Most of the current industrial developments and applied researches in the area of autonomous vehicles concern the methods and tools to enable \textit{individual} autonomous vehicles to hit the road safely. However, it is getting increasingly recognized that, to get full advantage from the autonomous vehicle technology, a number of situations will compulsory require \textit{coordinating} the relative activities and movements of the vehicles \cite{10.1007/978-3-030-03424-5_6} \cite{6949576}.
+
+
+Consequently, a natural extension of an \textit{individual} autonomous vehicle is to deal with MVS, with the help of \textit{coordination}. MVS, which have shown immense promise as a component of future transportation systems \cite{chai2017connected} \cite{C-Roads} \cite{sjoberg2017cooperative}, will be further discussed in the rest of the section. Not that the proposed MVS makes the assumption that connection is always available, either locally or globally. MVS provide appealing benefits in terms of operating in constrained environment, resolving problems concurrently, considerably reducing accidents and related costs.   
+
+Around the globe, car manufacturers and research institutes are starting to move away from the vision of building autonomous vehicles that are completely autarkic from their surroundings and towards including communication into their cars. Recent surveys cover benefits of such communication for autonomous driving \cite{wang2018networking} \cite{5G}. Vehicle connectivity is a new technology that enables Vehicle-to-Infrastructure (V2I), Vehicle-to-Vehicle (V2V) and Vehicle-to-Everything (V2X) communication \cite{blum2004threat} \cite{machardy2018v2x}. Vehicles equipped with interactive Advanced Driver Assistance Systems (ADAS) and Cooperative Intelligent Transportation Systems are typically considered to be connected \cite{uhlemann2015introducing}. Car connectivity may give both the regular vehicle and the autonomous vehicle new information and services. MVS are capable of receiving information from the V2X outside the field of vision and negotiating with other road users. Thus, MVS may outperform the \textit{individual} intelligent vehicle not only in terms of safety and performance, but also in terms of traffic throughput and fuel efficiency via global route planning and cooperative driving \cite{eskandarian2019research}.
+
+The connected ecosystem provided by the V2X paradigm linked to the autonomous vehicle technology permits to unlock new innovative mobility solutions just to mention a few: car sharing \cite{goodrich2008human}, where fleets of autonomous vehicles will be available to serve our urban mobility needs; personalized public transport and ride sharing  \cite{OnRecommending}\cite{stiglic2018enhancing}, where autonomous vehicles and buses can dynamically gather people based on their actual required routes; smart and more effective parking approaches \cite{lin2017survey}, in that autonomous vehicles can search for parking slots based on criterion different from the very soon and very close, one that humans usually adopt, and exploiting additional information that they might have. 
+
+It is difficult to test these innovative mobility solutions on public roads, and there is a lack of experimental validation in real-world conditions \cite{guanetti2018control}. Therefore, several programs based on MVS have been established by governments and national organizations. The following section gives an overview of MVS projects around the world. 
+
+\subsection{Overview of MVS projects around the world}\label{sec:MVS_Projects_Overview}
+
+
+In this section it is proposed to delve into the projects related to the MVS. These projects epitomize the technological advancements and innovations dedicated to enhancing the capabilities of MVS when navigating in on-road dynamic environments such as highways. 
+
+\subsubsection{PATH} \label{PathProject}
+Partners for Advanced Transportation Technology (PATH) 
+\cite{PathProject1} (cf. Figure \ref{fig:path_project}) is a research and development program of the University of California, Berkeley, has been a leader in Intelligent Transportation Systems research since its founding in 1986. In collaboration with the California Department of Transportation (Caltrans), administered by the university’s Institute of Transportation Studies, PATH is a multi-disciplinary program with staff, faculty, and students from universities worldwide and cooperative projects with private industry, state and local agencies, and nonprofit institutions.
+
+The PATH research on automated platoons was initially motivated by the need to produce a significant increase in the capacity of a highway lane, so that increases in travel demand could be accommodated with a minimum of new infrastructure construction. The PATH studies of highway capacity showed that it could be possible to increase lane capacity by factor of two to three over today's capacity if the vehicles were driven in platoons of up to ten cars \cite{michael1998capacity}. The gaps between platoons would be long enough to ensure that even in the worst crash hazard condition, with maximum deceleration, a following platoon would be able to stop without hitting the last vehicle of the forward platoon. An extensive modeling and simulation study of crash safety and capacity showed the advantages of the platoon mode over individual automated vehicle \cite{carbaugh1998safety}. The PATH studies have been based on the assumption that all vehicles would be automated, including the first vehicle on the platoon. 
+
+PATH first tested the longitudinal control of a four cars platoon at highway speeds in 1994, and then a demo based on eight cars platoon was developed for the National Automated Highway System Consortium (NAHSC) in 1997. The latter included a large set of maneuvers; car following, lane change, joining and leaving platoon to cite a few, all under completely automatic control. 
+
+More recently, the PATH platooning research has focused on heavy trucks, mainly because of the potential of energy saving associated with aerodynamic drag reductions. Operating tractor-trailer trucks in close-formation automated platoons of three trucks could enable a capacity of about 1500 trucks per lane per hour \cite{bergenhem2012overview}. The PATH experiments on truck platoons have shown the technical feasibility of driving two trucks at a gap of 3m and three trucks at a gap of 4m between trucks. These experiments have also shown direct fuel consumption savings in the range of 5\% for the lead truck and 10\% to 15\% for the following trucks. 
+
+\begin{figure}[!h]
+        \centering 
+        \includegraphics[width=8cm,height=18cm,keepaspectratio]{chapters/Chapitre_2/Figures/Path_project.png}
+     %   \vspace{-2.3mm}
+        \caption{Highway cooperative navigation part of the PATH project \cite{PathReport}}
+        \label{fig:path_project}
+        \end{figure}
+
+
+
+
+
+\subsubsection{Demo 2000}
+A demonstration on the cooperative driving with five automated vehicles was conducted in November 2000 part of the Demo 2000 cooperative driving project to show the feasibility and potential of the technologies \cite{tsugawa2000introduction}. The cooperative driving in Figure \ref{fig:Demo_2000}, aiming at the increase in the safety and throughput of road traffic, here means that automated vehicles are driven in a flexible platoon with a short inter-vehicle distance over a couple of lanes. The vehicles of the demonstration are equipped with RTK-GPS \cite{tsugawa2001cooperative} for vehicle localization, a laser radar detection of an obstacle or a preceding vehicle, the inter-vehicle communication unit, and the onboard display for the passenger to locate the neighboring vehicles. The localization data are employed for the lateral and the longitudinal control of the automated vehicle with the precise map of the demonstration site. The data on the localization and speed  of each vehicle in the platoon and the location of the obstacles are transmitted at every 100 milliseconds over the inter-vehicle communication. The protocol, nicknamed as DOLPHIN (Dedicated Omni-purpose inter-vehicle communication Linkage  Protocol for Highway automatIoN) after the ecology of the dolphins, is designed for the dedicated use in the demonstration. The five automated vehicles drove at 40 - 60 km/h on a test track according to the demonstration scenario including stop and go, platooning, lane changing, merging, and obstacle detection and avoidance \cite{tsugawa2001demo}.   
+
+
+\begin{figure}[!h]
+        \centering 
+        \includegraphics[width=8cm,height=18cm,keepaspectratio]{chapters/Chapitre_2/Figures/DEMO2000.PNG}
+       % \vspace{-2.3mm}
+        \caption{Platoon navigation under the DEMO 2000 project \cite{fujioka2002its}}
+        \label{fig:Demo_2000}
+        \end{figure}
+
+
+\subsubsection{Scania platooning}
+Fuel is one of the largest cost for a fleet owner \cite{bergenhem2012overview} \cite{aarts2016european}. Therefore, systems that reduce fuel consumption are high financial interest for fleet owners. Reducing the fuel consumption also reduces the environmental effect of the transport. Scania's main interest in the platooning is hence focused on heavy-duty  goods vehicle platooning on highways (cf. Figure \ref{fig:Scania_platooning}) with a highlight on fuel consumption minimization \cite{alam2015heavy}. 
+
+
+Distributed control of a heavy-duty vehicle platoon is a collaboration between Scania and the Royal Institute of Technology, and is partly funded by the Swedish government. The main focus of the project is how a single vehicle operating in a platoon should be efficiently controlled without jeopardizing safety. Longitudinal movement is autonomously controlled while lateral movement is manual. The control architecture has been developed based on a distributed control, meaning that each vehicle is responsible for its own control, based on information from onboard sensors (e.g., radar, cameras) along with, information exchange between the vehicles in the platoon via V2V communication. 
+
+% (b) iQFleet, is a collaboration between the KTH, the Swedish National Road and Transport Research Institute, The Swedish Transport Administration and is partly funded by the Swedish government. The project covers several research topics where platooning is one. Platooning research is focused on how platoons should be controlled w.r.t. other road users, road topology, instracture, etc. The goal is to develop strategies and architecture that support driving and routing a number of platoons in an optimal way w.r.t. the road conditions. iQFleet 
+
+It also includes real road tests of platooning. The trial takes place between two Swedish cities and it aimed to: 
+\begin{itemize}
+    \item Investigate the fuel saving potential in real traffic conditions, 
+    \item Evaluate the driver acceptance, 
+    \item Analyze interactions between the platoon and the surrounding traffic. 
+\end{itemize}
+
+\begin{figure}[!h]
+        \centering 
+        \includegraphics[width=8cm,height=18cm,keepaspectratio]{chapters/Chapitre_2/Figures/Scania_platooning.jpg}
+       % \vspace{-2.3mm}
+        \caption{Scania platooning  [image courtesy of Scania]}
+        \label{fig:Scania_platooning}
+        \end{figure}
+%For validity of the trials, the trucks were driven by professional trucks drivers. In the first phase, the platoon uses existing Adaptive Cruise Control based on radar information. The gap between the trucks was 2-3s, which corresponds to 40-60m. In the second phase, V2V communication was introduced, what shortened inter-trucks distance. 
+
+
+\subsubsection{Energy ITS}
+A national Intelligent Transportation System (ITS) project by the Japanese Ministry of Economy, Trade and Industry, started in 2008, aims at energy saving and global warming prevention with ITS technologies \cite{TSUGAWA201341}\cite{OHTA2023100187}. The latter has two themes: an automated truck platoon and an evaluation method of effectiveness of ITS on energy saving. Another motivation for the project is mitigating the lack of skilled drivers. On a test vehicle, a platoon of three completely automated heavy trucks and one fully automated light truck traveled at 80 kilometers per hour with a distance of up to 10 meters \cite{tsugawa2014results}. The lateral control is based on the lane marker detection by the computer vision, and the longitudinal control is based on the gap measurement by the lidar, radar and the V2V communication (cf. Figure \ref{fig:Energy_ITS}). According to the trial, platooning of 10m gap at 80 km/h can reduce energy by about 15\%  (measurement) by the aerodynamic drag reduction, and $CO_{2}$ by 2.1 \% (simulation) \cite{tsugawa2011automated}. Additionally, this research included testing on four heavy-duty trucks equipped with Cooperative Adaptive Cruise Control (CACC) \cite{tsugawa2014results}. 
+
+
+
+\begin{figure}[!h]
+        \centering 
+        \includegraphics[width=9cm,height=18cm,keepaspectratio]{chapters/Chapitre_2/Figures/ITS.png}
+      %  \vspace{-2.3mm}
+        \caption{Configuration of the automated truck part of the Energy ITS project \cite{tsugawa2014results}}
+        \label{fig:Energy_ITS}
+        \end{figure}
+
+
+
+
+
+
+
+\subsubsection{SARTRE}
+The SARTRE program (SAfe Road TRains for the Environment) \cite{bergenhem2010challenges}\cite{chan2016sartre} is an European Commission Co-Funded project that seeks to support a change in transport utilization. The project vision is to develop and integrate solutions that allow vehicles to drive in platoons on public roads without modification of the infrastructure. SARTRE train defines a platoon as a collection of vehicles led by manually driven heavy-duty vehicles. The vehicles behind follow the lead vehicle automatically; both laterally and longitudinally (cf. Figure \ref{fig:SARTRE}). Vehicles may join or leave the platoon dynamically (e.g., leave on arrival at the destination). SARTRE expected advantages of platooning include a reduction in fuel consumption, increased safety, traffic efficiency, increased driver convenience and comfort \cite{chan2012cooperative}\cite{2011-36-0060}.
+
+
+
+\begin{figure}[!h]
+        \centering 
+        \includegraphics[width=9cm,height=18cm,keepaspectratio]{chapters/Chapitre_2/Figures/SARTRE.jpg}
+        \caption{SARTRE project demonstration [image courtesy of the Volvo car corporation]}
+        \label{fig:SARTRE}
+        \end{figure}
+
+
+
+\subsubsection{Grand Cooperative Driving Challenge} \label{sec:GCDC}
+Low cost and reliable communication systems have recently renewed the interest in MVS. In the 2011 Grand Cooperative Driving Challenge (GCDC) (cf. Figure \ref{fig:GCDC2011}) \cite{bergenhem2010challenges}\cite{ploeg2012introduction}\cite{maartensson2012development}\cite{guvencc2012cooperative}, nine international teams joined the challenge with the purpose of supporting and accelerating the introduction of MVS in everyday traffic through a driving challenge. Two scenarios, one urban and one highway, were performed. The urban scenario featured two platoons standing one after the other with a certain distance. The task was to let the rear platoon join the foremost platoon with minimum disturbances. The highway scenario focused on the platooning performance, where a lead vehicle from the organizers guided the participating vehicles in maneuvers. 
+
+For both scenarios, evaluation criteria were based on total platoon length, platoon length variations, vehicle gap length, and string stability. The vehicles incorporated automated longitudinal control, whereas the drivers manually operated the lateral steering. The 2011 GCDC focused on forming platoons, while basic platoon operations such joining from rear on a single lane were performed, and complicated operations such as platoon merging from two parallel lanes were out of reach. The winner of the 2011 GCDC winner was Team AnnieWay; a group of researchers hosted at Karlsruhe Institute of Technology (Karlsruhe, Germany) \cite{geiger2012team}. 
+
+Many challenges surfaced during the 2011 GCDC, ranging from different interpretation of standards (e.g., time, position) to issues with radar reflections. One of the main challenges that occurred was related to wireless communication, where all participants should intercept the transmitted information in the same way. 
+
+While 2011 GCDC focused on basic platooning such as forming and maintaining a platoon, the 2016 GCDC \cite{ploeg2017cooperative} aimed to demonstrate how cooperative automated vehicles can perform complicated platooning operations with close to reality traffic scenarios (cf. Figure \ref{fig:GCDC2016}). In addition to the Heudiasyc team, nine other teams were part of the 2nd GCDC edition and were challenged through two typical environments; highway and urban intersection \cite{englund2016grand}. 
+
+Advanced platoon operation was investigated in the 2016 GCDC. The cooperative platoon merge scenario involved two platoons driving on a highway on different lanes that must merge into one platoon. A competition zone was defined within which the vehicles' operations were judged. Highway scenario included common events on road traffic (e.g., road works, lane closure, traffic merge). 
+
+Intersections are one of the most critical and challenging traffic environments that are attracting significant works \cite{chen2015cooperative}. In order to showcase MVS abilities, a cooperative urban non-controlled intersection was considered. To be more realistic, the latter involved non-communicating vehicles. In addition, a third scenario was considered, including an emergency vehicle that required passage in a congested traffic situation. Team Halmstad from the Halmstad University (Halmstad, Sweden) won the challenge \cite{aramrattana2018team}. 
+
+
+
+In Table \ref{tab:Summary_project} a summary of the above discussed project is given. 
+
+
+\begin{figure}[ht]
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\includegraphics[width=\textwidth]{chapters/Chapitre_2/Figures/GCDC2011.png}
+\caption{GCDC 2011 [image courtesy of IEEE]}
+\label{fig:GCDC2011}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\includegraphics[width=1.05\textwidth]{chapters/Chapitre_2/Figures/GCDC2016.jpeg}
+\caption{GCDC 2016 [image courtesy of IEEE]}
+\label{fig:GCDC2016}
+\end{minipage}
+\end{figure}
+
+
+
+
+% %%%%%%%%%%%%%
+% \newenvironment{changemargin}[2]{%
+% \begin{list}{}{%
+% \setlength{\topsep}{-4pt}%
+% \setlength{\leftmargin}{#1}%
+% %\setlength{\rightmargin}{#2}%
+% \setlength{\listparindent}{\parindent}%
+% \setlength{\itemindent}{\parindent}%
+% \setlength{\parsep}{\parskip}%
+% }%
+% \item[]}{\end{list}}
+% %%%%%%%%%%%%
+
+
+
+\newpage
+\thispagestyle{empty}
+
+\begin{landscape}
+  \begin{adjustwidth}{-0.20\textwidth}{-0.20\textwidth}
+
+\begin{table}[]
+\resizebox{21cm}{!}{
+\centering
+
+\begin{tabular}{|c|c|c|c|c|c|l|}
+\hline
+                                                                         & Vehicle type                                                          & Control                                                             & Infrastructure requirement                                                       & Traffic integration                                                         & Sensors                                                       & \multicolumn{1}{c|}{Goals}                                                                                                                             \\ \hline
+PATH (1986 - 1997)                                                       & \begin{tabular}[c]{@{}c@{}}Cars or heady \\ duty trucks\end{tabular}  & \begin{tabular}[c]{@{}c@{}}Longitudinal \\ and lateral\end{tabular} & \begin{tabular}[c]{@{}c@{}}Reference markers\\  in road surface\end{tabular} & \begin{tabular}[c]{@{}c@{}}Dedicated lane \\ (highway focused)\end{tabular} & Mixed                                                         & \begin{tabular}[c]{@{}l@{}}- Energy savings \\ - Increase traffic throughput\end{tabular}                                                                  \\ \hline
+Demo 2000 (2000)                                                         & Cars                                                                  & \begin{tabular}[c]{@{}c@{}}Longitudinal \\ and lateral\end{tabular} & None                                                                         & Mixed                                                                       & Mixed                                                         & \begin{tabular}[c]{@{}l@{}}- Demonstrate platooning efficiency \\- Build a dolphin inspired \\ communication protocol\end{tabular}                        \\ \hline
+\begin{tabular}[c]{@{}c@{}}Scania platooning \\ (2001- now)\end{tabular} & heavy-duty trucks                                                     & Longitudinal                                                        & None                                                                         & \begin{tabular}[c]{@{}c@{}}Mixed \\ (highway focused)\end{tabular}          & Mixed                                                         & \begin{tabular}[c]{@{}l@{}}- Fuel savings\\ - Demonstrate complex \\ maneuvers using platooning\end{tabular}                                              \\ \hline
+\begin{tabular}[c]{@{}c@{}}Energy ITS \\ (2008 - 2012)\end{tabular}      & heavy-duty trucks                                                     & \begin{tabular}[c]{@{}c@{}}Longitudinal \\ and lateral\end{tabular} & Lane markers                                                                 & Dedicated lane                                                              & Mixed                                                         & \begin{tabular}[c]{@{}l@{}}- Mitigate lack of skilled drivers \\- Energy saving\end{tabular}                                                              \\ \hline
+\begin{tabular}[c]{@{}c@{}}SARTRE \\ (2009 - 2012)\end{tabular}          & \begin{tabular}[c]{@{}c@{}}Cars and heavy \\ duty trucks\end{tabular} & \begin{tabular}[c]{@{}c@{}}Longitudinal \\ and lateral\end{tabular} & None                                                                         & \begin{tabular}[c]{@{}c@{}}Mixed \\ (highway focused)\end{tabular}          & \begin{tabular}[c]{@{}c@{}}Production \\ sensors\end{tabular} & \begin{tabular}[c]{@{}l@{}}- Increase safety and passengers' \\ comfort \\ - Reduce road congestion, \\ along with energy saving\end{tabular}                 \\ \hline
+1st GCDC (2011)                                                          & Cars mainly                                                           & Longitudinal                                                        & None                                                                         & \begin{tabular}[c]{@{}c@{}}Mixed \\ (highway focused)\end{tabular}          & Mixed                                                         &\begin{tabular}[c]{@{}l@{}}- Accelerate MVS deployment \\ - Demonstrate platooning  feasibility\end{tabular}\\ \hline
+2nd GCDC (2016)                                                          & Cars                                                                  & \begin{tabular}[c]{@{}c@{}}Longitudinal \\ and lateral\end{tabular} & None                                                                         & Mixed                                                                       & Mixed                                                         & \begin{tabular}[c]{@{}l@{}}- Outperform complex platooning \\maneuvers \\ - Demonstrate cooperative \\ intersection crossing feasibility\end{tabular} \\ \hline
+\end{tabular}
+}
+\caption{Summary of the major project involving MVS}
+\label{tab:Summary_project}
+\end{table}
+\end{adjustwidth}
+
+\end{landscape}
+\newpage
+
+
+
+
+
+\section{Cooperative navigation for MVS: scenarios overview} \label{sec: CooperativeNavigation-Scenarios Overview}
+The challenge of \textbf{coordinating} the actions and interactions of MVS within on-road environments in a vast multifaceted one. This challenge encompasses an array of highly diverse scenarios, ranging from scenarios involving cooperative merging on highway on ramps, as well as, employing tools such as Cooperative Adaptive Cruise Control (CACC) for tasks like platooning. To urban settings involving cooperative navigation through signalized and non-signalized intersections. Despite this apparent diversity, these varied scenarios can be effectively unified and conceptualized within a coherent framework (cf. Figure \ref{fig:CAV_applications}). 
+
+
+
+With \textbf{coordination} we refer to the decision-making and planning (involving vehicles themselves and possibly some additional infrastructure process) aimed at orchestrating vehicle' actions as to achieve a goal which cannot be achieved (or not optimally) by each vehicle in isolation. The coordination goal may belong either to an individual vehicle (e.g., intersection crossing), or to a group of vehicles (e.g., platoon navigation), or even the traffic system as a whole (e.g., improving the city traffic flow) (cf. Figure \ref{fig:CAV_applications}).  
+
+In the following section, it is proposed an overview of the topics related to the problem of coordinating the motion of MVS from the scenario perspective. 
+
+
+\begin{figure}[!h]
+        \centering 
+        \includegraphics[width=11cm,height=18cm,keepaspectratio]{chapters/Chapitre_2/Figures/Schema_cooperative.png}
+        %\vspace{-2.3mm}
+        \caption{MVS applications: an overview}
+        \label{fig:CAV_applications}
+                \vspace{-5mm}
+        \end{figure}
+\subsection{Cooperative navigation in urban environment}
+
+% il faut citer le CGDC 2016 avec la gestion d'intersection en mode cooperatif et renvoyer vers le projet que je detail un peu plus haut 
+% introduction 
+In urban core areas, MVS navigation becomes highly difficult under a variety of urban situations involving numerous road users. Several MVS applications have been explored to benefit safety, mobility and the environment with connected vehicles \cite{karmanska2021benefits}\cite{CAVBenefits}\cite{congestion2}. Among them, MVS cooperation technology for intersection or roundabout applications attract representative and significant efforts. More precisely, research on MVS cooperative driving is conducted at both signalized and unsignalized intersection/roundabout. 
+
+
+% definition de la coordination 
+Intersection crossing (cf. Figure \ref{fig:intersection}) and roundabout (cf. Figure \ref{fig:roundabout}) navigation in urban areas is the problem of coordinating vehicles' motions while concurrently navigating through the intersection/roundabout. According to \cite{mariani2021coordination}, the problem of intersection/roundabout is a competitive resource-oriented problem, where the vehicles are self-interested agents willing to obtain the right-of-way as soon as possible across the shared resource represented by the intersection/roundabout.  
+
+
+        \begin{figure}[!h]
+        \centering 
+        \includegraphics[width=10cm,height=18cm,keepaspectratio]{chapters/Chapitre_2/Figures/Intersection.PNG}
+        %\vspace{-2.3mm}
+        \caption{Cooperative intersection crossing}
+        \label{fig:intersection}
+              %  \vspace{-5mm}
+        \end{figure}
+
+        \begin{figure}[!h]
+        \centering 
+        \includegraphics[width=10cm,height=18cm,keepaspectratio]{chapters/Chapitre_2/Figures/Driving School.PNG}
+        %\vspace{-2.3mm}
+        \caption{Cooperative roundabout crossing}
+        \label{fig:roundabout}
+               % \vspace{-5mm}
+        \end{figure}
+
+% le problème c'est quoi
+Today, intersections management is realized either by a central controller, the traffic light, or by imposing to vehicles (i.e., the drivers) pre-defined coordination rules to be obeyed (e.g., stop at sign or give the right-of-way to vehicles coming from the right), as well as for roundabout \cite{7562449}. This put the responsibility for safety fully in charge of humans, and not promote efficiency. 
+
+% les solutions possibles mais qui ne sont pas possible à la fois
+To tackle the problem of intersection/roundabout navigation, it is possible (i) to act on the supply side, increasing the number of roads or lanes in a network, (ii) to reduce the demand, restricting the access to urban areas at specific hours or to specific vehicles, or (iii) to improve the efficiency of the existing network, by means of a widespread use of MVS.
+
+% la solution avec les CAVs et la communication 
+In fact, with the help of V2V communication and/or V2I communication, it is possible to conceive a variety of innovative solutions, safer and more efficient. Roughly, V2I communication is often preferred at signalized intersections in order to get Signal Phase and Time (SPaT) information and prevent unnecessary speed changes or complete stops \cite{Eco-Approach}.
+
+ Within an intelligent transportation system, V2V and V2I communications are often used at intersection/roundabout  \cite{guanetti2018control}\cite{wang2019survey}, eventually making traffic light and stop signs obsolete. With the help of V2V and/or V2I communication, the possibility of sharing future intentions among vehicles is feasible, helping to prevent conflicting trajectories. Thus, following the planning and scheduling algorithm, MVS can be assigned specific sequences to cross the intersection/roundabout. Alongside, communication offers opportunity to optimize the passing order, also known as passing sequence, among the vehicles within a certain communication range, this means that the navigation task through the intersection/roundabout can be seen as a global task related to the participating vehicles, where each vehicle has its own passing order provided by a multi-criterion function. This cooperative behavior permits to translate the problem of intersection/roundabout from a competitive resource-oriented task to a cooperative altruistic-task oriented, where the global aim tackles the traffic throughput, idling time at intersection/roundabout and energy efficiency, in addition to risk metrics.
+
+In fact, the research work related to MVS navigation coupled with V2V/V2I communication in intersection/roundabout has gained considerable attention during the last decades. Comprehensive surveys about this problem are analyzed in \cite{chen2015cooperative}\cite{elliott2019recent}\cite{guo2019urban}\cite{namazi2019intelligent}\cite{rasheed2013fleet}. 
+
+%\textcolor{blue}{ajouter une figure avec plusieurs intersection et des roundpoint un peu comme dans la these de zhang en ajoutant une signalized intersection/roundabout et une unsignalized intersection/roundabout}
+
+
+%The authors in \textcolor{red}{ajouter la reference 513 de la these de zhang} propose an Eco-CACC algorithm that computes the most fuel-efficient vehicle trajectory through a signalized intersection by guarantying that the vehicle arrives at the intersection stop bar as soon as the last connected vehicle in the queue is dischargedµ. The work in \textcolor{red}{ajouter la reference 540 de la these de zhang} considers a real-time 
+
+
+
+
+
+
+
+
+
+\subsection{Cooperative navigation in highway environment}
+Among the maneuvers performed by the vehicle on a highway environment one can cite on/off-ramp merging \cite{7562449}\cite{zhu2022merging}, platoon navigation \cite{kavathekar2011vehicle}, lane change \cite{moridpour2010lane}. Some of these maneuvers can be challenging since they involve numerous road users performing at high maneuvers \cite{dey2015review}. 
+ 
+% pourquoi intégrer les ITS dans les highways, les CAVs avec la communication et les avantages de cette intégration.
+With the significant developments achieved during the last decade with the help of intelligent transportation systems, addressing mobility issues on highway become possible. The integration of MVS on highway environment appears to be the next ITS move and the natural extension to the aforementioned mobility technology. Mainly because, in one hand, under the MVS paradigm, collaborative navigation on a highway addresses the problem of coordinating the vehicle's maneuvers, so they travel together without causing any collision risk \cite{bayat2017environmental}\cite{faisal2019understanding}\cite{montanaro2019towards}. In the other hand, connectivity integrated in MVS, make them capable to not only drive by themselves with on-board sensors, but also to communicate with each other with the help of the V2V communication \cite{hakak2022autonomous}\cite{balador2022survey}. Consequently, it improves road safety where future actions can be well anticipated where a better understanding of the navigation scene can be built. Beside the safety benefits, MVS technology associated with communication permits to increase traffic throughput by reducing safety distance between MVS, and to improve energy efficiency by avoiding unnecessary speed changes \cite{bagloee2016autonomous}. 
+
+%Based on the impact of CAVs technology on highway, it has garnered considerable attention during the last decade. Moreover, it is seen in the literature as an auspicious technology not only to tackle traffic throughput on highway, but also to overcome the safety and the mobility issues related to on-off ramp merging on highways.  
+
+
+Over the past decade, the impact of MVS technology on highways has captured significant attention. This innovative technology is regarded in the literature as promising, not only for addressing traffic congestion on highways but also for enhancing safety and mobility by addressing the challenges associated with on/off ramp merging. An overview addressing the utilization of the MVS technology in the context of highway navigation in platoon is provided in Section \ref{sec:platooning_navigation}. Section \ref{sec:on-ramp merging} specifies MVS utilization in the context of on-ramp merging on highway. 
+
+\subsubsection{Cooperative platooning navigation on highway}\label{sec:platooning_navigation}
+% introduction des applications comme le platooning 
+On the highway, human driven vehicles have a natural tendency to follow one another closely and operate within a phenomenon known as longitudinal formation or platooning (cf. Figure \ref{fig:Merging}). For a human-operated vehicle, a platoon-based formation can be considered as basic behavior, and it can be easily distinguished in everyday life. However, for MVS, they must stay in the same lane and follow nearby vehicles by maintaining safe distance and velocity, to form the desired longitudinal shape. The aim of the platoon formation control is to confirm that all the vehicles in a platoon move at the same speed while maintaining the desired geometry, which is stated by a desired inter-vehicle spacing strategy \cite{hafner_survey_2022}. Therefore, for MVS, platoon formation requires specific algorithms, controllers and strategies.
+
+
+\begin{figure}[!h]
+        \centering 
+        \includegraphics[width=10cm,height=18cm,keepaspectratio]{chapters/Chapitre_2/Figures/merging.PNG}
+      %  \vspace{-2.3mm}
+        \caption{Cooperative merging on highway}
+        \label{fig:Merging}
+             %   \vspace{-5mm}
+        \end{figure}
+
+It was under the PATH (cf. Section \ref{PathProject}) research project that the current CACC implementation in production vehicles was mainly developed as the extension of the commercially available ACC system \cite{6588305} (cf. Figure \ref{fig:CACC}). Therefore, most CACC vehicles are also equipped with sensors installed on ACC vehicles, such as odometers, radar and/or LiDAR, along with communication. Given the fact that the communication bandwidth might become insufficient when the number of MVS increases in a CACC system, short ranged wireless technologies are more accepted for V2V communication \cite{Grilli}. By sharing vehicle information such as acceleration, speed and position, MVS in the communication range can cooperate to increase highway capacity \cite{ren2008distributed}.
+
+
+
+%Communication topology is a cornerstone in the CACC technology \cite{8569947}. The information flow topology defines the way CAV obtains information from other CAV in a CACC system. %Some typical types of information flow topologies include predecessor-following, predecessor-leader following, two predecessor-following, two predecessor-leader following and bidirectional types . 
+
+
+
+
+
+
+
+\begin{figure}[!h]
+        \centering 
+        \includegraphics[width=10cm,height=18cm,keepaspectratio]{chapters/Chapitre_2/Figures/CACC.PNG}
+      %  \vspace{-2.3mm}
+        \caption{Cooperative adaptive cruise control: platooning navigation}
+        \label{fig:CACC}
+              %  \vspace{-5mm}
+        \end{figure}
+
+%In this section collaborative navigation of MVS in highway using platooning will be discussed through its impact on highway throughput, and on energy efficiency. The cooperative Adaptive Cruise Control (CACC) is presented as a tool to perform cooperative navigation on highway. 
+
+
+
+
+
+
+%The latter is based on the extension of Adaptive Cruise Control (ACC) with cooperative maneuvers by CAVs. \textcolor{red}{ajouter la reference A review on Cooperative Adaptive Cruise Control systems: Architectures, controls and applications}. 
+
+%Cooperative Adaptive Cruise Control (CACC) is one of the most promising technologies for CAVs platooning navigation on highway. At the heart of the concept of CACC is the merging of Adaptive Cruise Control (ACC), a subset of the broader class of automated longitudinal speed control systems, with a cooperative module enabled with the V2V/V2I \textcolor{red}{ajouter la bonne reference, voir le rapport bibio}. 
+
+
+
+%The development made in communication field permit to communicate information between the CAVs using the V2V communication, and between the CAVs and the infrastructure with the help of the V2I communication. 
+
+
+
+
+
+
+
+
+  
+ 
+ In CACC systems, MVS share their own data with other MVS in the network by V2V communications, which is realized in a distributed manner without central management \cite{1402433}.
+ 
+ CACC takes advantages of V2V communications to allow MVS to form platoons and be driven at harmonized speeds with short-time headway between them.  MVS in a certain communication range can cooperate with others to obtain the following benefits: (i) driving safety is increased since actuation time is shortened compared to manually driven, and downstream traffic can be broadcasted to following vehicles in advance; (ii) roadway capacity is increased due to the reduction of time/distance headway between vehicles; (iii) energy consumption and pollutant emissions are reduced due to the reduction of unnecessary velocity changes and aerodynamic drag on following vehicles \cite{massar2021impacts}. 
+
+\subsubsection{Cooperative on-ramp merging on highway}\label{sec:on-ramp merging}
+
+
+Traffic merging at highway on-ramps (cf. Figure \ref{fig:OnRamp}) is a major conflict that generates safety and mobility concerns. The difficulty arises for the AV along the on-ramp where it has to discern whether to accelerate or decelerate to enter the main line safely and may not have a clear line of sight. Meanwhile, the mainline highway users may have to modify their speeds to permit the entrance of merging AV, thus affecting traffic flow which may result in road congestion. To address these issues, cooperative MVS have was studied and applied to the highway on-ramp merge case, where different control algorithms have been proposed and implemented to allow MVS to merge with each other in a cooperative manner. Existing related works have been reviewed in \cite{7562449}. 
+
+ 
+ 
+ 
+ \begin{figure}[!h]
+        \centering 
+        \includegraphics[width=10cm,height=18cm,keepaspectratio]{chapters/Chapitre_2/Figures/OnRamp.png}
+        %\vspace{-2.3mm}
+        \caption{Cooperative on-ramp merging on highway}
+        \label{fig:OnRamp}
+              %  \vspace{-5mm}
+        \end{figure}
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+\section{Conclusion}
+
+
+
+
+In this chapter, a comparison between single autonomous vehicle systems and multi-vehicle systems is explored. Since MVS comprises several individual AVs in a cooperative manner, this chapter provides a summary of the mechanisms employed by the AVs within their control architecture, paving the pay for the presentation of the MVS paradigm. An extensive overview of prominent projects involving MVS is presented. Additionally, the chapter delves into contexts where MVS finds utility in dynamic and challenging on-road environments. It examines relevant works related to both urban cooperative navigation and highway platooning navigation, in addition to the on-ramp merging on highway. Finally, the chapter highlights the significant advantages of utilizing MVS in various scenarios, with a particular focus emphasis on highway context. 
+ 

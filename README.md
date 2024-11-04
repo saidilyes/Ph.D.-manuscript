@@ -2,8 +2,9 @@
 
 This repository holds the LaTeX code for generating the PDF file of the "Safe and Energy Efficient Decision/Control Architecture for a Formation of Multi-Vehicle System
 in Dynamic Environment" thesis, written by Lyes Saidi and defended in January 2024.
-If you want to read the thesis directly, the pre-compiled PDF is available [Here](https://saidilyes.github.io/#experience)." thesis, written by Lyes Saidi and defended in January 2024.
-If you want to read the thesis directly, the pre-compiled PDF is available [Here](https://saidilyes.github.io/#experience).
+- **The defence slides are available [here](https://saidilyes.github.io/PhD_Defense/).**
+ 
+- **If you want to read the thesis directly, the pre-compiled PDF is available [here](https://saidilyes.github.io/#experience).**
 
 ## Abstract 
 The widespread use of Intelligent Transportation Systems (ITS) primarily stems from the

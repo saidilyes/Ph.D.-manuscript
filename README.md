@@ -1,6 +1,7 @@
 # Ph.D.-manuscript
 
-This repository holds the LaTeX code for generating the PDF file of the "This repository holds the LaTeX code for generating the PDF file of the "Multimodal Estimation of Movement and Depth Based on Events for Scene Analysis" thesis, written by Vincent Brebion and defended in January 2024.
+This repository holds the LaTeX code for generating the PDF file of the "Safe and Energy Efficient Decision/Control Architecture for a Formation of Multi-Vehicle System
+in Dynamic Environment" thesis, written by Lyes Saidi and defended in January 2024.
 If you want to read the thesis directly, the pre-compiled PDF is available [Here](https://saidilyes.github.io/#experience)." thesis, written by Lyes Saidi and defended in January 2024.
 If you want to read the thesis directly, the pre-compiled PDF is available [Here](https://saidilyes.github.io/#experience).
 

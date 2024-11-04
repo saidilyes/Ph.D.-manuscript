@@ -6,6 +6,16 @@ in Dynamic Environment" thesis, written by Lyes Saidi and defended in January 20
  
 - **If you want to read the thesis directly, the pre-compiled PDF is available [here](https://saidilyes.github.io/#experience).**
 
+If you use this document as part of your work, please cite:
+
+```
+@phdthesis{saidi2024safe,
+  title={Safe and energy efficient decision/control architecture for a formation of multi-vehicle system in dynamic environment},
+  author={Saidi, Lyes},
+  year={2024},
+  school={Compi{\`e}gne}
+}
+``` 
 ## Abstract 
 The widespread use of Intelligent Transportation Systems (ITS) primarily stems from the
 imperative to mitigate human errors contributing to accidents. However, addressing the

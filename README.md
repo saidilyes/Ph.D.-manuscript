@@ -57,3 +57,7 @@ employs virtual dynamic targets to ensure a secure reshaping of the formation to
 the desired configuration based on the selected passing order. The overall architecture’s
 performance is assessed through co-simulation using Matlab/Simulink and SCANeR studio.
 #### Keywords: Highway cooperative navigation, Multi-vehicle system, Multi-controller architecture, Multi-behavior decision-making strategy, Dynamic formation reconfiguration strategy.
+
+## Copyright
+This thesis and all its figures and tables are published under the Creative Commons Attribution (CC BY) 4.0 International license.
+This means that you can share and adapt this work, as long as you give appropriate credit, provide a link to the license, and indicate if changes were made.
